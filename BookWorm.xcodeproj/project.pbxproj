@@ -13,6 +13,8 @@
 		23767DAC26946213005A121C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23767DAB26946213005A121C /* Preview Assets.xcassets */; };
 		23767DAE26946213005A121C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23767DAD26946213005A121C /* Persistence.swift */; };
 		23767DB126946213005A121C /* BookWorm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23767DAF26946213005A121C /* BookWorm.xcdatamodeld */; };
+		23767DB92694BBB0005A121C /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23767DB82694BBB0005A121C /* AddBookView.swift */; };
+		23767DBB2694C6C7005A121C /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23767DBA2694C6C7005A121C /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		23767DAD26946213005A121C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		23767DB026946213005A121C /* BookWorm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookWorm.xcdatamodel; sourceTree = "<group>"; };
 		23767DB226946213005A121C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23767DB82694BBB0005A121C /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		23767DBA2694C6C7005A121C /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				23767DA426946213005A121C /* BookWormApp.swift */,
 				23767DA626946213005A121C /* ContentView.swift */,
+				23767DB82694BBB0005A121C /* AddBookView.swift */,
+				23767DBA2694C6C7005A121C /* RatingView.swift */,
 				23767DA826946213005A121C /* Assets.xcassets */,
 				23767DAD26946213005A121C /* Persistence.swift */,
 				23767DB226946213005A121C /* Info.plist */,
@@ -147,7 +153,9 @@
 				23767DAE26946213005A121C /* Persistence.swift in Sources */,
 				23767DB126946213005A121C /* BookWorm.xcdatamodeld in Sources */,
 				23767DA726946213005A121C /* ContentView.swift in Sources */,
+				23767DBB2694C6C7005A121C /* RatingView.swift in Sources */,
 				23767DA526946213005A121C /* BookWormApp.swift in Sources */,
+				23767DB92694BBB0005A121C /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
