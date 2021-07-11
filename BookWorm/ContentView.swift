@@ -5,8 +5,8 @@
 //  Created by Matteo on 06/07/2021.
 //
 
-import SwiftUI
 import CoreData
+import SwiftUI
 
 struct ContentView: View {
     
@@ -15,7 +15,7 @@ struct ContentView: View {
         NSSortDescriptor(keyPath: \Book.title, ascending: true),
         NSSortDescriptor(keyPath: \Book.author, ascending: true),
         NSSortDescriptor(keyPath: \Book.rating, ascending:false)
-    ])var books: FetchedResults<Book>
+    ]) var books: FetchedResults<Book>
     
     @State private var showingAddScreen = false
    
@@ -35,19 +35,32 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteBooks)
             }
                 .navigationBarTitle("BookWorm")
-                .navigationBarItems(trailing:
-                                        Button(action: {
-                                            self.showingAddScreen.toggle()
-                                        }) {
-                                            Image(systemName: "plus")
-                                        }
+                .navigationBarItems(
+                    leading:
+                        EditButton(),
+                    trailing:
+                        Button(action: {
+                            self.showingAddScreen.toggle()
+                        }) {
+                            Image(systemName: "plus")
+                        }
                 )
                 .sheet(isPresented: $showingAddScreen) {
                     AddBookView().environment(\.managedObjectContext, self.moc)
                 }
         }
+    }
+    
+    func deleteBooks(at offsets: IndexSet) {
+        for offset in offsets {
+            let book = books[offset]
+            moc.delete(book)
+        }
+        
+        try? moc.save()
     }
 }
     
